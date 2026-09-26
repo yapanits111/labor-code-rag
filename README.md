@@ -5,6 +5,10 @@ grounded in the **Labor Code of the Philippines** and **DOLE's Handbook on
 Workers' Statutory Monetary Benefits**, with a citation for every claim and a
 link that opens the source PDF at the right page.
 
+**[Try it live →](https://labor-code-ph.onrender.com)** &nbsp;·&nbsp; Runs on
+Render's free tier, so the first visit after a quiet spell takes about a
+minute to wake up.
+
 It's a retrieval-augmented generation (RAG) system built from the ground up:
 PDF parsing, chunking, vector search, prompting and evaluation are all
 hand-written. No LangChain and no vector database. It's measured against the
