@@ -1,0 +1,833 @@
+{
+ "provider": "groq",
+ "summary": {
+  "questions": 32,
+  "answerable": 30,
+  "k": 6,
+  "hit@6": 1.0,
+  "mrr": 0.909,
+  "rag": {
+   "correct": 32,
+   "of": 32,
+   "names_article": 10,
+   "article_questions": 10,
+   "outdated_numbers": 0,
+   "wrong_numbers": 0,
+   "retrieval_failures": 0,
+   "generation_failures": 0
+  },
+  "baseline": {
+   "correct": 26,
+   "of": 29,
+   "names_article": 5,
+   "article_questions": 10,
+   "outdated_numbers": 4,
+   "wrong_numbers": 8
+  }
+ },
+ "questions": [
+  {
+   "question": "What is the maximum number of normal working hours per day?",
+   "sources": [
+    "art:83"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "art-83",
+    "hb-1-minimum-wage-5",
+    "art-87",
+    "hb-1-minimum-wage-8",
+    "art-91",
+    "art-85-notes"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-83"
+   ],
+   "rag_answer": "The normal working day cannot exceed eight (8) hours of work [1].  \nThis limit applies to all employees unless a special rule applies (e.g., health personnel in large cities or hospitals may be required to work a sixth day, in which case they receive a 30 % premium for that day) [1].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "current",
+   "baseline_answer": "**Answer (in plain language):**  \nUnder Philippine law, a regular employee may be required to work **no more than 8 hours per day** (or 48 hours per week). Anything beyond this is considered overtime and must be paid with the appropriate premium rates.\n\n**Legal basis:**  \n- **Article 83** of the Labor Code of the Philippines – “Normal Hours of Work”. This article states that the normal workday shall not exceed eight (8) hours, and the normal workweek shall not exceed forty‑eight (48) hours."
+  },
+  {
+   "question": "How long should my meal break be?",
+   "sources": [
+    "art:85"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "art-85",
+    "art-85-notes",
+    "hb-1-minimum-wage-11",
+    "art-83",
+    "hb-1-minimum-wage-5",
+    "art-146-notes"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-85",
+    "art-85-notes"
+   ],
+   "rag_answer": "Your regular meal break must be at least sixty (60) minutes long, unless a specific case under the Omnibus Rules permits a shorter period that is then counted as compensable work time. [1][2]",
+   "baseline_verdict": "PASS",
+   "baseline_article": "current",
+   "baseline_answer": "**Answer (in plain language)**  \nUnder Philippine labor law, if you work a full shift, you are entitled to **at least a one‑hour meal break**.  The break is usually taken around the middle of the workday, but the exact timing can be set by your employer as long as the minimum one‑hour period is respected.\n\n**Legal basis**  \n- **Labor Code, Article 85** – “The employer shall give the employee a reasonable period for a meal of not less than one (1) hour.”  \n- The same provision applies to all workers, including minors (those under 18 years old).  \n\nSo, your meal break should be **no shorter than 1 hour** per workday. If your employer gives you less than that, it would be contrary to Article 85 of the Labor Code."
+  },
+  {
+   "question": "How much is the night shift differential and what hours does it cover?",
+   "sources": [
+    "art:86",
+    "hb:5"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-5-night-shift-differential-3",
+    "art-86",
+    "hb-5-night-shift-differential-1",
+    "hb-compliance-guide-5",
+    "hb-compliance-guide-4",
+    "hb-compliance-guide-3"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "hb-5-night-shift-differential-3",
+    "art-86",
+    "hb-5-night-shift-differential-1"
+   ],
+   "rag_answer": "The night‑shift differential is an extra 10 percent of an employee’s regular hourly wage for each hour worked between 10 p.m. and 6 a.m. of the following day [1][2][3].\n\n**Key points and exceptions**\n\n1. **Rate** – Add 10 % of the regular hourly rate to the base pay for every hour performed during the night‑shift window [1][2][3].\n2. **Covered hours** – Only work performed from 10:00 p.m. up to 6:00 a.m. qualifies [1][2][3].\n3. **Who gets it** – All employees are covered **unless** they fall into one of the exempt categories listed in the Handbook:\n   - Government employees (national, local, GOCCs) [3];\n   - Workers in retail or service establishments that regularly employ **five or fewer** workers [3];\n   - Kasambahay and personal service workers [3];\n   - Managerial employees who (a) manage the establishment or a department, (b) regularly direct at least two employees, and (c) have hiring/firing authority or weighty influence on personnel decisions [3];\n   - Officers or members of a managerial staff whose primary duties are management‑related [3].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "current",
+   "baseline_answer": "**Night‑shift differential in the Philippines**\n\n- **Amount:** You get an extra **10 % of your regular hourly rate** for the hours you work at night.  \n- **Hours covered:** The night‑shift premium applies to work performed **between 10 p.m. and 6 a.m.** of the following day.\n\n**Legal basis**\n\n- **Article 85, Labor Code** – provides that workers who render service “during the night” shall receive “an additional compensation of not less than ten percent (10 %) of the employee’s regular wage for each hour of work performed.”  \n- **Article 86, Labor Code** – defines “night work” as work performed “between 10 p.m. and 6 a.m.” and sets the rule that the night‑shift differential is computed on the **hourly rate** (i.e., regular daily wage divided by eight).\n\nSo, under Philippine labor law, any work you do from **10 p.m. to 6 a.m.** earns you a **minimum 10 % night‑shift differential** on top of your regular hourly wage."
+  },
+  {
+   "question": "How much is overtime pay for work beyond eight hours on an ordinary day?",
+   "sources": [
+    "art:87",
+    "hb:4",
+    "hb:Compliance Guide"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "art-87",
+    "hb-4-overtime-pay-1",
+    "hb-4-overtime-pay-2",
+    "hb-compliance-guide-3",
+    "hb-4-overtime-pay-3",
+    "art-89"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "hb-4-overtime-pay-1",
+    "art-87"
+   ],
+   "rag_answer": "Overtime pay for work beyond eight hours on an ordinary working day is the employee’s basic hourly wage multiplied by 125 % (the regular hourly rate plus an additional 25 %).  \n\n- This applies when the extra hours are worked on a normal workday, not on a rest day, special (non‑working) day, or holiday.  \n- The rate is the basic wage hourly rate × 125 % (hourly rate × 1.25) as stated in the DOLE Handbook (Article 87) and matches the Labor Code’s rule that overtime must be paid “an additional compensation equivalent to his regular wage plus at least twenty‑five percent (25%) thereof” [2][1].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "wrong",
+   "baseline_answer": "**Overtime pay on an ordinary workday**\n\nWhen you work more than 8 hours in a day that is not a rest day, a holiday, or a night shift, the law requires you to be paid **at least 125 % of your regular hourly wage** for the extra hours. In other words, you get your normal rate **plus an extra 25 %** for every overtime hour.\n\n**Legal basis**\n\n- **Article 85 of the Labor Code of the Philippines** – “Overtime work shall be paid an additional 25 % of the employee’s regular wage for overtime work on ordinary days…”  \n\nSo, overtime on an ordinary day = **regular hourly rate × 1.25**."
+  },
+  {
+   "question": "Am I entitled to a weekly day off?",
+   "sources": [
+    "art:91"
+   ],
+   "retrieval_rank": 2,
+   "retrieved": [
+    "art-94-notes-4",
+    "art-91",
+    "art-93",
+    "art-94",
+    "art-95",
+    "art-85"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-91"
+   ],
+   "rag_answer": "You are entitled to a weekly day off of at least twenty‑four consecutive hours after every six consecutive work days [2].  \n\nThe employer must schedule that rest day, respecting collective‑bargaining rules and, when based on religious grounds, the employee’s preference; the schedule may be set by the employer otherwise [2].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "current",
+   "baseline_answer": "**Yes – you are generally entitled to at least one day off each work week.**  \n\n| What the law says | Where it is found in the Labor Code |\n|--------------------|------------------------------------|\n| **Every employee shall have a weekly rest day of not less than 24 consecutive hours.** This is the basic rule for all workers, unless a special exception applies (e.g., certain managerial, supervisory, or “professional” employees, or those who work under a “continuous work” schedule). | **Article 91** (formerly Article 83) – “Rest Day.” |\n| **If a worker is required to work on the scheduled rest day, the employer must give a compensatory day off (or pay an additional 30% premium).** | **Article 91** (paragraph 3) – “Work on Rest Day.” |\n| **Employees in certain industries (e.g., hotels, restaurants, hospitals, and other 24‑hour operations) may have a “continuous work” schedule, but they still must receive at least one day off in every seven‑day period, which can be rotated among employees.** | **Article 306** – “Continuous Work Schedule.” |\n| **Domestic workers, independent contractors, and other non‑employees are not covered by the weekly‑rest‑day provision.** | **Article 2** – Definition of “employee.” |\n\n### What this means for you\n\n1. **If you are a regular, contractual, or casual employee** (i.e., you receive a salary or wage from an employer), you should receive **one full day off every week** – typically Sunday, but any day may be scheduled as the rest day.\n2. **If you are asked to work on that day**, the employer must either:  \n   * give you a **compensatory day off** on another day, **or**  \n   * pay you **30% extra** of your normal wage for the hours worked on the rest day (plus the regular pay for those hours).\n3. **Exceptions** – Managers, supervisors, professionals, and those in “continuous work” operations may have a different schedule, but even they must get a day off within each 7‑day period (often by rotating days among staff).\n\nSo, under the Philippine Labor Code, **you are entitled to at least one weekly day off**, backed by **Article 91** (and, where applicable, **Article 306**)."
+  },
+  {
+   "question": "How much extra do I get if I work on my scheduled rest day?",
+   "sources": [
+    "art:93",
+    "hb:3",
+    "hb:Compliance Guide"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "art-93",
+    "hb-compliance-guide-3",
+    "hb-3-premium-pay-5",
+    "hb-compliance-guide-4",
+    "art-87",
+    "hb-2-holiday-pay-5"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-93",
+    "hb-3-premium-pay-5",
+    "hb-compliance-guide-4"
+   ],
+   "rag_answer": "You get an extra 30 percent of your regular wage for work done on your scheduled rest day [1].  \n\nThis 30 % premium applies whenever you actually work on the day that is your regular day off. If a collective bargaining agreement or employment contract gives a higher rate, the higher amount must be paid instead [1]. If you also happen to work on a holiday that falls on your rest day, other premium rates (e.g., 50 % for a special holiday or 30 % on top of the 200 % holiday rate) apply in addition to the basic rest‑day premium [3][4].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "wrong",
+   "baseline_answer": "**Plain‑language answer**\n\nIf you are required to work on a day that your employer has scheduled as your regular rest day, you are entitled to extra pay on top of your normal daily wage.  The extra pay is **30 % of your regular rate** for the hours you actually work on that rest day.\n\nSo, for every hour you work on your scheduled rest day you get:\n\n*Your normal hourly wage* + *30 % of that wage*  \n\n(If you work overtime on the rest day, the premium rises to 130 % of the regular hourly rate, but the basic rule is the 30 % rest‑day premium.)\n\n**Legal basis**\n\n- **Article 86** of the Philippine Labor Code – “Work on Rest Day” – provides that work performed on a scheduled rest day shall be paid an additional **30 %** of the employee’s regular rate.  \n- The same article also notes that if the work on the rest day is overtime, the employee shall receive **130 %** of the regular hourly rate (i.e., the 30 % rest‑day premium on top of the ordinary overtime premium).\n\nTherefore, the extra you receive for working on your scheduled rest day is a 30 % premium on your regular pay (or 130 % if it is overtime)."
+  },
+  {
+   "question": "What is my pay if I work on a regular holiday?",
+   "sources": [
+    "art:94",
+    "hb:2",
+    "hb:Compliance Guide"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-2-holiday-pay-5",
+    "hb-2-holiday-pay-8",
+    "hb-2-holiday-pay-4",
+    "hb-2-holiday-pay-1",
+    "art-94",
+    "art-93"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "hb-2-holiday-pay-1",
+    "art-94",
+    "hb-2-holiday-pay-4"
+   ],
+   "rag_answer": "You receive twice your regular daily wage for the first eight hours you work on a regular holiday (basic wage × 200%).  \n\n- This rate applies to all covered employees who are not exempt under the coverage rules (e.g., government workers, establishments with fewer than ten retail/service staff, kasambahay, managerial staff, etc.) [4][5].  \n- The holiday‑pay rule guarantees at least the minimum wage even if you do not work, but if you do work you are paid the higher rate of 200% of your daily wage for the first eight hours [3].  \n\nSo, if your basic daily wage is ₱ X, your holiday pay for up to eight hours of work is ₱ X × 2 (or 200%).",
+   "baseline_verdict": "FAIL",
+   "baseline_article": "current",
+   "baseline_answer": "**Plain‑language answer**\n\nIf a day is declared a **regular holiday** (e.g., New Year’s Day, Independence Day, Christmas), you are **still entitled to your full daily wage** even if you do not report for work.  \n\nIf you **do work** on that holiday, you get **your regular daily wage + an additional 30 % of that wage** (often called a “holiday premium”). In other words, you receive **130 % of your normal daily rate** for the hours you actually worked that day.\n\n---\n\n**Legal basis in the Philippine Labor Code**\n\n| Situation | What the law says | Article(s) |\n|-----------|-------------------|------------|\n| **No work on a regular holiday** – you still get your full daily wage. | “An employee who does not work on a regular holiday shall be paid his regular wage.” | **Article 92** (as amended by Republic Act No. 10151) |\n| **Work performed on a regular holiday** – extra pay. | “An employee who works on a regular holiday shall be paid his regular daily wage plus an additional 30 % of his daily rate for the first eight (8) hours. If the employee works overtime, the overtime rates apply on top of the holiday premium.” | **Article 94** (as amended by Republic Act No. 10151) |\n| **Definition of regular holiday** (to know which days apply). | “Regular holidays are those fixed by law or by the President… and are observed nationwide.” | **Article 87** |\n\n---\n\n### How to calculate it\n\n1. **Determine your daily rate** (basic salary ÷ 22 working days, or as your contract specifies).  \n2. **If you did NOT work** on the holiday:  \n   \\- Pay = 100 % of daily rate.  \n\n3. **If you DID work** on the holiday (up to 8 hours):  \n   \\- Pay = Daily rate × 130 % (i.e., 1.30 × daily rate).  \n\n4. **If you worked overtime** on that holiday:  \n   \\- First 8 hours = 130 % of daily rate.  \n   \\- Overtime hours = 1.5 × (overtime rate) **plus** the 30 % holiday premium (effectively 1.5 × daily rate × 1.30).  \n\n---\n\n**Example**\n\n- Daily rate = ₱1,000.  \n- You **did not work** on the holiday: you still receive ₱1,000.  \n- You **worked 8 hours** on the holiday: you receive ₱1,000 × 1.30 = **₱1,300**.  \n\nThat’s it—your pay on a regular holiday is either your full daily wage (if you rest) or 130 % of that wage (if you work)."
+  },
+  {
+   "question": "Do I get paid on a regular holiday even if I don't work?",
+   "sources": [
+    "art:94",
+    "hb:2"
+   ],
+   "retrieval_rank": 4,
+   "retrieved": [
+    "hb-2-holiday-pay-5",
+    "hb-2-holiday-pay-8",
+    "hb-2-holiday-pay-6",
+    "hb-2-holiday-pay-4",
+    "hb-2-holiday-pay-7",
+    "art-94"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "hb-2-holiday-pay-4",
+    "art-94",
+    "hb-2-holiday-pay-5"
+   ],
+   "rag_answer": "Yes, you are entitled to holiday pay even if you do not work on a regular holiday, provided you were present or on a paid leave of absence on the workday immediately before the holiday.  \n- The rule is that an employee who does not work on a regular holiday must be paid at least 100 % of his/her wage for that day (basic wage × 100 %) [4].  \n- This entitlement applies to all workers except those in retail or service establishments that regularly employ fewer than ten workers, who are exempt under Art. 94(a) of the Labor Code [6].  \n- To qualify, you must either be present at work or be on a leave of absence with pay on the day preceding the holiday; otherwise the holiday pay may be denied [1]‑E.1.",
+   "baseline_verdict": "PASS",
+   "baseline_article": "wrong",
+   "baseline_answer": "**Short answer:** Yes. If a regular holiday falls on a day you are scheduled to work, you are entitled to be paid your normal daily wage **even if you do not actually work** that day.\n\n**Why? (Labor Code basis)**  \n\n| Situation | What the Labor Code says | Pay you receive |\n|-----------|---------------------------|-----------------|\n| **You are scheduled to work on a regular holiday but you are **not** required to report for work** (e.g., you are given a day off or you are excused) | **Article 91** of the Labor Code provides that “*an employee who is not required to work on a regular holiday shall be paid his/her regular daily wage*.” | 100 % of your regular daily rate |\n| **You are scheduled to work on a regular holiday and you do work** | **Article 92** (and the implementing rules) says that if you work on a regular holiday you get “*the employee’s regular daily wage plus an additional 100 % of his/her daily rate*” (i.e., 200 % of the regular rate). | 200 % of your regular daily rate (or 100 % + the premium) |\n| **You are not scheduled to work on a regular holiday** (your regular workday is on another day of the week) | The same **Article 91** applies: you are still paid your regular daily wage for the holiday, even though you would not have worked anyway. | 100 % of your regular daily rate |\n\n**Key points to keep in mind**\n\n1. **“Regular holiday”** means the holidays listed in the official government calendar (e.g., New Year’s Day, Independence Day, Christmas Day, etc.).  \n2. The rule applies **regardless of whether you actually report for work**, as long as the holiday falls on a day you would normally be scheduled to work.  \n3. If your employer **does not pay** the 100 % rate for a holiday you were scheduled to work but were given a day off, you can file a complaint with the Department of Labor and Employment (DOLE) or pursue a claim through the Labor Arbiter.  \n\n**Bottom line:** Under **Article 91 of the Philippine Labor Code**, you must receive at least your regular daily wage for a regular holiday even if you do not work on that day. If you do work, you get the higher rate provided by **Article 92**."
+  },
+  {
+   "question": "What is the pay rate for working on a regular holiday that falls on my rest day?",
+   "sources": [
+    "hb:Compliance Guide",
+    "hb:2",
+    "hb:3"
+   ],
+   "retrieval_rank": 5,
+   "retrieved": [
+    "art-93",
+    "hb-2-holiday-pay-5",
+    "hb-2-holiday-pay-8",
+    "hb-2-holiday-pay-4",
+    "hb-compliance-guide-3",
+    "art-94"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": null,
+   "cited": [
+    "hb-compliance-guide-3"
+   ],
+   "rag_answer": "The pay rate is 260 % of your daily wage (2.6 times the regular daily wage) for work done on a regular holiday that falls on your scheduled rest day[5].",
+   "baseline_verdict": "PASS",
+   "baseline_article": null,
+   "baseline_answer": "**Plain‑language answer**\n\nIf you work on a **regular holiday that also happens to be your scheduled rest day**, you are paid **twice your normal daily rate (200 % of your basic wage) **plus** the holiday premium of an additional 30 % of that basic rate**. In effect, you receive **260 % of your regular daily wage** for the day you work.\n\n**Why? (Labor Code provisions)**  \n\n| What the law says | How it applies to your situation |\n|-------------------|-----------------------------------|\n| **Article 92, Labor Code** – “An employee who works on a regular holiday shall be paid **at least twice** his/her ordinary rate of pay for the first eight (8) hours.” | This gives you the 200 % rate for working on a regular holiday. |\n| **Article 91, Labor Code** – “An employee who works on a rest day shall be paid an **additional 30 %** of his/her basic daily rate.” | Because the day is also your scheduled rest day, you are entitled to the 30 % rest‑day premium. |\n| **Interpretation (Supreme Court & DOLE)** – When a regular holiday **coincides with a rest day**, the employee receives **both benefits**: 200 % for the holiday **plus** the 30 % rest‑day premium (i.e., 260 % of the basic rate).  This approach is consistently applied in cases such as *Globe Telecom, Inc. v. National Labor Relations Commission* (G.R. No. 165587, 23 Oct 2005) and the Department Order No. 20‑03 (which implements the holiday‑pay rules). | Confirms that the two premiums are cumulative, not mutually exclusive. |\n\n**Bottom line:**  \n- **Work on a regular holiday + rest day** → **260 % of your regular daily wage** (200 % holiday rate + 30 % rest‑day premium).  \n- The same rate applies for the first eight (8) hours of work; any overtime beyond 8 hours would be computed separately under Article 94 (overtime pay).  \n\n*Note:* The 30 % rest‑day premium is **in addition** to the 200 % holiday pay; it is not a separate “extra” amount on top of the 200 % (i.e., you do not get 200 % + 30 % = 230 %). The correct total is **260 %** of the basic daily rate."
+  },
+  {
+   "question": "What is the premium for working on a special non-working day?",
+   "sources": [
+    "art:93",
+    "hb:3",
+    "hb:Compliance Guide"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-3-premium-pay-4",
+    "hb-compliance-guide-3",
+    "hb-2-holiday-pay-5",
+    "hb-3-premium-pay-3",
+    "hb-3-premium-pay-5",
+    "hb-2-holiday-pay-8"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "missing",
+   "cited": [
+    "hb-3-premium-pay-4",
+    "hb-compliance-guide-3"
+   ],
+   "rag_answer": "The premium for working on a special (non‑working) day is an extra 30 % of the basic wage, so the employee receives a total of 130 % of the basic wage for the first eight hours worked [1][2].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "wrong",
+   "baseline_answer": "**Plain‑language answer**\n\nWhen an employee works on a **special non‑working day** (e.g., a special holiday that is not a regular rest day), the employee must be paid **30 % more than the basic rate of pay for the work performed**.  \n\n- If the employee works **regular hours only**, the pay is **130 % of the basic rate** (the normal wage + the 30 % premium).  \n- If the employee works **overtime** on that day, the overtime premium is added on top of the 130 % rate (e.g., 150 % of the basic rate for the first 8 hours, then 170 % for overtime hours).\n\n**Legal basis**\n\n- **Article 87 of the Labor Code of the Philippines** – “Work on a special non‑working day shall be paid an additional premium of thirty percent (30%) of the employee’s basic rate of pay for the actual number of hours worked.”  \n\nSo, the premium for working on a special non‑working day is **30 % of the employee’s basic rate of pay**, as required by Article 87."
+  },
+  {
+   "question": "How many days of service incentive leave do employees get?",
+   "sources": [
+    "art:95",
+    "hb:7"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "art-95",
+    "hb-7-service-incentive-leave-3",
+    "hb-7-service-incentive-leave-1",
+    "hb-7-service-incentive-leave-2",
+    "hb-7-service-incentive-leave-4",
+    "hb-compliance-guide-6"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-95",
+    "hb-compliance-guide-6",
+    "hb-7-service-incentive-leave-1"
+   ],
+   "rag_answer": "Employees are entitled to five (5) days of service incentive leave each year after completing one year of service. The law grants a yearly SIL of five days with pay [1] and the Handbook lists the duration as five days [6] (also described as “five days granted… after at least one year of service” [3]).",
+   "baseline_verdict": "PASS",
+   "baseline_article": "current",
+   "baseline_answer": "**Answer:**  \nEmployees are entitled to **5 days of Service Incentive Leave (SIL) per year** (with pay).  \n\n**Legal basis:** Labor Code of the Philippines, **Article 95** (Service Incentive Leave).  \n\n- The article states that every employee who has rendered at least one year of service shall be entitled to a yearly paid leave of **five (5) days** for personal purposes.  \n- If the employee’s service is less than a year, the leave is **prorated** based on the actual length of service.  \n\nSo, the standard entitlement is **5 days of paid SIL each year**."
+  },
+  {
+   "question": "How must service charges collected by restaurants be distributed?",
+   "sources": [
+    "art:96",
+    "hb:6"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-6-service-charges-2",
+    "art-96",
+    "hb-6-service-charges-1",
+    "hb-6-service-charges-3",
+    "art-96-notes",
+    "hb-6-service-charges-notes-1"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "hb-6-service-charges-2",
+    "art-96",
+    "hb-6-service-charges-1",
+    "hb-6-service-charges-3"
+   ],
+   "rag_answer": "Service charges collected by restaurants must be distributed completely and equally among all covered employees, based on the actual hours or days each employee worked or rendered service, and paid at least twice a month (no more than 16 days apart)[1][2].  \n\nKey points:  \n\n- “Covered employees” include all workers of the establishment except managerial employees, regardless of position, designation, employment status, or how they are paid[3].  \n- The distribution must be “completely and equally” and calculated according to each employee’s actual hours or days worked[1].  \n- Payments must be made not less than once every two weeks or twice a month, with intervals not exceeding 16 days[1].  \n- Service‑charge amounts are not counted toward compliance with any minimum‑wage increase[4].",
+   "baseline_verdict": "FAIL",
+   "baseline_article": "wrong",
+   "baseline_answer": "**Plain‑language answer**\n\nWhen a restaurant collects a “service charge” from its customers, the law says that money can’t just stay in the owner’s pocket. It must be **shared with the employees who actually performed the service** (waiters, bartenders, kitchen staff, etc.). The usual way to do this is to divide the total service‑charge pool proportionally to each worker’s hours or duties.  \n\nIf the restaurant has a **collective bargaining agreement (CBA) or a written agreement with its employees** that spells out a different method of sharing, that agreement can be followed instead. But absent such an agreement, the default rule is that the service charge is to be distributed to the service personnel.\n\n**Labor Code articles that back this rule**\n\n| Article | What it says (simplified) | How it applies to service charges |\n|---------|---------------------------|-----------------------------------|\n| **Art. 102 (b), Labor Code** | “Any amount collected by an employer as a **service charge** shall be deemed part of the employee’s wages and must be paid to the employee, unless there is a written agreement to the contrary.” | Requires that the service‑charge pool be treated like wages and paid out to workers. |\n| **Art. 100, Labor Code** | “Wages shall be paid directly to the employee or to his authorized representative.” | Reinforces that the service charge, once treated as wages, must be paid directly to the employees (or their representative). |\n| **Art. 116, Labor Code** (re: CBA) | “A collective bargaining agreement may stipulate the manner of distribution of service charges.” | Allows a CBA to modify the default proportional‑distribution method, but only if the CBA is valid and has been properly negotiated. |\n\n**Bottom line**\n\n- **Default rule:** Service charges collected by a restaurant are considered part of wages and must be **distributed to the service staff** (usually on a proportional basis).  \n- **Exception:** A valid, written agreement (e.g., a CBA) may set a different distribution method, but the agreement must be in place before the charges are collected.  \n\nIf a restaurant fails to share the service charge as required, employees can file a complaint with the Department of Labor and Employment (DOLE) and may recover the unpaid amounts under the above provisions."
+  },
+  {
+   "question": "How many days of maternity leave does a female employee get for a live birth?",
+   "sources": [
+    "art:131",
+    "hb:8",
+    "hb:Compliance Guide"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-8-maternity-leave-2",
+    "art-131",
+    "hb-compliance-guide-6",
+    "hb-8-maternity-leave-4",
+    "art-131-notes",
+    "hb-8-maternity-leave-3"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "missing",
+   "cited": [
+    "hb-8-maternity-leave-2",
+    "hb-compliance-guide-6",
+    "hb-8-maternity-leave-3"
+   ],
+   "rag_answer": "A female employee gets 105 days of paid maternity leave for a live birth, and if she is a qualified solo parent she may receive an additional 15 days, for a total of 120 days [1][3][6].  \n\n**Key conditions / exceptions**  \n- She must have at least three monthly SSS contributions in the 12 months before the semester of childbirth (or miscarriage/termination) and must have notified her employer of the pregnancy and the expected delivery date [6].  \n- The extra 15 days applies only to workers who qualify as solo parents under Republic Act No. 8972, as amended by RA 11861 [1].  \n- The 105‑day period is the standard entitlement for live childbirth; miscarriage or emergency termination of pregnancy gives a separate 60‑day entitlement [3].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "wrong",
+   "baseline_answer": "**Answer:** A female employee who gives birth is entitled to **105 days of paid maternity leave** (for a normal delivery). If the birth is by caesarean section, the leave is extended to **120 days**.  \n\n**Legal basis**\n\n- **Republic Act No. 11210** (the *Maternity Care Act of 2019*), Sec. 2, provides that a covered female worker shall be entitled to **105 days** of paid maternity leave for a normal delivery, and **120 days** for a caesarean delivery or for solo‑parent workers.  \n- This benefit is incorporated into the **Labor Code of the Philippines, Art. 99** (as amended by R.A. 11210), which authorizes the same period of leave for workers covered by the Labor Code.  \n\nSo, under Philippine labor law, a female employee gets **105 days** of maternity leave for a live birth (normal delivery)."
+  },
+  {
+   "question": "How many days of paternity leave can a married male employee take?",
+   "sources": [
+    "hb:9",
+    "hb:Compliance Guide"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-9-paternity-leave-2",
+    "hb-compliance-guide-7",
+    "hb-9-paternity-leave-3",
+    "hb-9-paternity-leave-1",
+    "art-95-notes",
+    "hb-8-maternity-leave-4"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": null,
+   "cited": [
+    "hb-9-paternity-leave-2",
+    "hb-compliance-guide-7",
+    "hb-9-paternity-leave-3"
+   ],
+   "rag_answer": "A married male employee is entitled to seven days of paternity leave for each delivery of his child. The leave is limited to a maximum of seven days per delivery and cannot be converted to cash [1][2][3].",
+   "baseline_verdict": "PASS",
+   "baseline_article": null,
+   "baseline_answer": "**Answer:**  \nA married male employee is entitled to **7 calendar days** of paid paternity leave for each birth of his legitimate child.\n\n**Legal basis**\n\n- **Republic Act No. 11210 (Paternity Leave Act of 2019), Sec. 2** – provides “seven (7) calendar days of paid paternity leave” for a married male worker whose child is legitimate (or for an unmarried worker if the child is recognized as his own).  \n- The Labor Code itself does not contain a specific provision on paternity leave; the entitlement is created by the above special law, which is applied together with the Labor Code’s general rules on leaves and wages.  \n\nSo, under Philippine law, a married male employee may take **7 days** of paid paternity leave per childbirth."
+  },
+  {
+   "question": "How many days of parental leave can a solo parent take each year?",
+   "sources": [
+    "hb:10",
+    "hb:Compliance Guide"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-10-parental-leave-for-solo-parents-8",
+    "hb-10-parental-leave-for-solo-parents-5",
+    "hb-10-parental-leave-for-solo-parents-3",
+    "hb-10-parental-leave-for-solo-parents-1",
+    "hb-10-parental-leave-for-solo-parents-7",
+    "art-95-notes"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": null,
+   "cited": [
+    "hb-10-parental-leave-for-solo-parents-5"
+   ],
+   "rag_answer": "A solo parent can take up to seven (7) working days of parental leave with pay each year.  \n\n- The leave is “for not more than seven working days with pay every year” and is forfeitable and noncumulative[2].  \n- It may be used once per year; if not used it cannot be converted to cash unless the employer and employee previously agreed[2].",
+   "baseline_verdict": "PASS",
+   "baseline_article": null,
+   "baseline_answer": "**Answer**  \nA solo parent is entitled to **seven (7) days of parental leave per year**. The leave can be used for the birth of a child, the adoption of a child, or to attend to a child’s medical or educational needs.\n\n**Legal basis**  \n- **Republic Act No. 8972 – “The Solo Parents’ Welfare Act of 2000,” Section 4** (the “Parental Leave” provision).  \n\nThe Labor Code itself does not contain a specific provision on solo‑parent parental leave; the entitlement is created by the separate statute above. Therefore, no article of the Labor Code is cited for this particular right."
+  },
+  {
+   "question": "How many days of leave can a victim of violence against women take?",
+   "sources": [
+    "hb:11",
+    "hb:Compliance Guide"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-11-leave-for-victims-of-violence-against-women-and-their-children-vawc-3",
+    "hb-11-leave-for-victims-of-violence-against-women-and-their-children-vawc-1",
+    "hb-11-leave-for-victims-of-violence-against-women-and-their-children-vawc-4",
+    "hb-11-leave-for-victims-of-violence-against-women-and-their-children-vawc-2",
+    "art-95-notes",
+    "hb-compliance-guide-8"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": null,
+   "cited": [
+    "hb-11-leave-for-victims-of-violence-against-women-and-their-children-vawc-4",
+    "hb-compliance-guide-8"
+   ],
+   "rag_answer": "A victim of violence against women can take up to ten days of paid leave.  \nThe entitlement is triggered when the employee shows a certification from the barangay chairman, barangay councilor, prosecutor, or Clerk of Court that an action related to VAWC is pending, and the leave may be extended if the protection order specifies it [3][6].",
+   "baseline_verdict": "PASS",
+   "baseline_article": null,
+   "baseline_answer": "A victim of Violence Against Women and Their Children (VAWC) is entitled to **ten (10) days of paid leave** per year.\n\n**Legal basis in the Labor Code**  \n- **Article 97** – “Leave for victims of violence against women and their children.” This article provides that an employee who is a victim of VAWC may be granted leave with pay of up to ten (10) days for each incident of violence, subject to the employer’s verification of the case.  \n\nSo, under Philippine labor law, a VAWC victim can take **up to 10 days of paid leave** as mandated by **Article 97 of the Labor Code**."
+  },
+  {
+   "question": "How long is the special leave for women who undergo surgery for gynecological disorders?",
+   "sources": [
+    "hb:12",
+    "hb:Compliance Guide"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-12-special-leave-for-women-2",
+    "hb-12-special-leave-for-women-4",
+    "hb-12-special-leave-for-women-1",
+    "hb-12-special-leave-for-women-3",
+    "hb-compliance-guide-8",
+    "hb-12-special-leave-for-women-notes-1"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": null,
+   "cited": [
+    "hb-12-special-leave-for-women-1",
+    "hb-12-special-leave-for-women-4",
+    "hb-compliance-guide-8"
+   ],
+   "rag_answer": "The special leave for women who undergo surgery for gynecological disorders is up to two months, or a maximum of 60 calendar days, per year.  \n\n- It is defined as a paid leave of “up to two months” following such surgery (passage [3]).  \n- The duration is limited to “two months or 60 calendar days per year” (passage [2]).  \n- The summary table also lists the benefit as “Up to 60 days” (passage [5]).",
+   "baseline_verdict": "PASS",
+   "baseline_article": null,
+   "baseline_answer": "**Answer (in plain language):**  \nA female employee who needs surgery for a gynecological disorder is entitled to **60 days of paid special leave**. This leave is granted in addition to any other leave benefits she may have.\n\n**Legal basis:**  \n- **Article 96** of the Philippine Labor Code (formerly Article 140) – “Special Leave Benefits for Women.”  \n\nThis article specifies that a woman who undergoes surgery for a gynecological disorder shall be given “a paid leave of not less than sixty (60) days.” The leave is counted from the date of surgery and is separate from maternity leave or other types of leave."
+  },
+  {
+   "question": "How is 13th-month pay computed?",
+   "sources": [
+    "hb:13"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-13-thirteenth-month-pay-4",
+    "hb-13-thirteenth-month-pay-3",
+    "hb-13-thirteenth-month-pay-1",
+    "hb-13-thirteenth-month-pay-5",
+    "hb-13-thirteenth-month-pay-8",
+    "hb-13-thirteenth-month-pay-7"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": null,
+   "cited": [
+    "hb-13-thirteenth-month-pay-1",
+    "hb-13-thirteenth-month-pay-3",
+    "hb-13-thirteenth-month-pay-4",
+    "hb-13-thirteenth-month-pay-5"
+   ],
+   "rag_answer": "The thirteenth‑month pay is computed as one‑twelfth (1/12) of the employee’s total basic salary earned during the calendar year, after deducting any days of leave without pay, and then divided by 12 months [3] (definition) and [2] (amount).  \n\n**Key steps**  \n1. Add up the employee’s basic salary for the whole year, using the actual amounts earned each month (e.g., January ₱15,910.83, February ₱15,910.83, …, subtracting pay for days of leave without pay) [1].  \n2. Divide that total by 12 to get the proportionate thirteenth‑month pay [1][2].  \n3. If the employee worked at least one month in the year and is a rank‑and‑file worker, they are covered [3].  \n4. The employer may give half of the amount before the school year starts and the remaining half on or before December 24 [4].  \n\n*Example:* With a total basic salary of ₱184,219.96 for the year, the thirteenth‑month pay is ₱184,219.96 ÷ 12 = ₱15,351.66.",
+   "baseline_verdict": "PASS",
+   "baseline_article": null,
+   "baseline_answer": "**How 13th‑month pay is calculated (in plain language)**  \n\n1. **Take all the basic wages you earned during the calendar year** – this is your regular salary *plus* any other regular earnings such as:\n   * commissions, overtime pay, and other monetary benefits that are normally considered part of “basic salary” (as defined by the Department of Labor and Employment).  \n   * **Do NOT** include extra payments that are not part of basic salary, such as: cash gifts, premium pay for night shift, holiday pay, or any other “allowances” that are purely discretionary.\n\n2. **Add them up from January 1 to December 31** (or from the date you started working if you were hired after January 1).\n\n3. **Divide that total by 12.**  \n\n   \\[\n   \\text{13th‑month pay} = \\frac{\\text{Total basic salary earned in the year}}{12}\n   \\]\n\n4. **Pay it out no later than December 24** of the same year (or on the date of termination if you leave the job before year‑end, but the employer must still compute the prorated amount).\n\n---\n\n### Legal basis  \n\n- **Article 100 of the Labor Code of the Philippines** – establishes the right to a 13th‑month pay, the definition of “basic salary,” and the deadline for payment.  \n- **Presidential Decree No. 851 (implementing rules)** – clarifies that the computation is based on the total basic salary earned during the year divided by 12.\n\nSo, the 13th‑month pay you receive is simply one‑twelfth of the total basic salary you earned over the year. If you worked only part of the year, you get a proportionate (prorated) share based on the months you actually worked."
+  },
+  {
+   "question": "What is the deadline for paying the 13th-month pay?",
+   "sources": [
+    "hb:13"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-13-thirteenth-month-pay-5",
+    "hb-13-thirteenth-month-pay-1",
+    "hb-13-thirteenth-month-pay-7",
+    "hb-13-thirteenth-month-pay-notes-1",
+    "hb-13-thirteenth-month-pay-notes-2",
+    "hb-13-thirteenth-month-pay-3"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": null,
+   "cited": [
+    "hb-13-thirteenth-month-pay-5"
+   ],
+   "rag_answer": "The thirteenth‑month pay must be paid not later than December 24 of each calendar year [1].",
+   "baseline_verdict": "PASS",
+   "baseline_article": null,
+   "baseline_answer": "**Plain‑language answer**\n\nEmployers must give workers their 13th‑month pay **no later than December 24 of each year**. If the regular payday falls earlier (for example, if you’re paid on the 15th of every month), the 13th‑month pay should be paid on that same payday, but it still cannot be later than December 24.\n\n**Legal basis**\n\n- **Presidential Decree No. 851, Section 2** (the “13th‑Month Pay Law”), as amended by **Presidential Decree No. 1,059** – requires that the 13th‑month pay be paid *“not later than December 24 of each year.”*  \n\n(While this rule is found in the PD, it is the governing provision that implements the Labor Code’s mandate on wages.)"
+  },
+  {
+   "question": "Is an employee who resigned entitled to 13th-month pay?",
+   "sources": [
+    "hb:13"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-13-thirteenth-month-pay-7",
+    "hb-13-thirteenth-month-pay-1",
+    "hb-13-thirteenth-month-pay-3",
+    "hb-13-thirteenth-month-pay-5",
+    "hb-13-thirteenth-month-pay-8",
+    "hb-13-thirteenth-month-pay-6"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": null,
+   "cited": [
+    "hb-13-thirteenth-month-pay-7",
+    "hb-13-thirteenth-month-pay-1"
+   ],
+   "rag_answer": "Yes, a resigned employee is entitled to a proportionate 13th‑month pay based on the months actually worked that year. The benefit is computed as one‑twelfth of the total basic salary earned from the start of the calendar year up to the resignation date (e.g., if only January to September were worked, the amount equals 1/12 of the basic salary earned during that period) [1]. All rank‑and‑file employees who have worked at least one month in the year are covered by the rule that they must receive 13th‑month pay, regardless of whether they resign before the December 24 payment deadline [2].",
+   "baseline_verdict": "PASS",
+   "baseline_article": null,
+   "baseline_answer": "**Short answer:**  \nYes. Even if an employee quits, he or she is still entitled to a **pro‑rated (proportionate) 13th‑month pay** for the part of the year that he/she actually worked.\n\n**Why? (the law)**  \n\n| Law / Article | What it says | How it applies to a resigning employee |\n|---------------|--------------|----------------------------------------|\n| **Presidential Decree No. 851 (13th‑Month Pay Law), Sec. 2** | “All employers… shall pay their employees a **13th‑month pay** not later than **December 30** of every year. The amount shall be **at least one‑twelth** (1/12) of the total basic salary earned by the employee during the calendar year.” | The decree does **not** limit the benefit to only “regular” or “still‑employed” workers. It applies to **all employees** who have rendered service for at least one month during the year. |\n| **Labor Code of the Philippines, Art. 103** (as amended by **R.A. 10653** – “13th Month Pay Law”) | “An employer shall pay his employees a 13th‑month pay… **unless otherwise provided by law**.” | This reinforces PD 851 and makes the 13th‑month pay a **mandatory benefit** for *all* employees, regardless of the reason for termination (resignation, retirement, dismissal, etc.). |\n| **R.A. 10361 (Amending Art. 103)** | Clarifies that the 13th‑month pay is **“a statutory benefit”** that is **separable** from other wages and must be given even if the employee’s contract ends before the end of the year. | Confirms that the right to the 13th‑month pay **does not disappear** when the employee resigns. |\n\n**How the amount is calculated for a resigning employee**\n\n1. **Determine the total basic salary earned** from **January 1** up to the **last day of employment** (including overtime, night differentials, etc., if they are part of “basic salary” under PD 851).  \n2. **Divide that amount by 12** (or multiply the monthly basic salary by the number of months actually worked and then divide by 12).  \n3. The result is the **pro‑rated 13th‑month pay** the employee must receive **no later than December 30** of that year, or **upon termination** if the employer chooses to settle it earlier (many companies pay it together with the final pay).\n\n**Example**  \n- An employee earned a total basic salary of **₱240,000** from January 1 to August 31 (8 months).  \n- 13th‑month pay = ₱240,000 ÷ 12 = **₱20,000**.  \n- The employee who resigned on August 31 is entitled to receive that ₱20,000 as part of his/her final settlement.\n\n**Bottom line:**  \nResignation does **not** strip an employee of the right to 13th‑month pay. The employee gets a proportionate share of the benefit for the months actually worked, as required by **PD 851** and **Art. 103 of the Labor Code**."
+  },
+  {
+   "question": "What are the just causes for which an employer may terminate an employee?",
+   "sources": [
+    "art:297"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "art-297",
+    "art-300",
+    "art-294",
+    "art-299",
+    "art-292-1",
+    "art-112"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-297"
+   ],
+   "rag_answer": "An employer may terminate an employee only for the following just causes: serious misconduct or willful disobedience of lawful orders; gross and habitual neglect of duties; fraud or willful breach of the trust placed in the employee; commission of a crime or offense against the employer, the employer’s immediate family, or the employer’s authorized representatives; and other causes analogous to these. [1]",
+   "baseline_verdict": "PASS",
+   "baseline_article": "current",
+   "baseline_answer": "**Just causes** – the reasons that an employer may legally **dismiss** (terminate) an employee **without liability** for illegal dismissal are set out in **Article 297 (formerly Art. 282)** of the **Labor Code of the Philippines**.  \nThe Code lists **seven (7) specific just causes**:\n\n| # | Just cause (plain‑language description) | What it means in practice |\n|---|------------------------------------------|----------------------------|\n| 1 | **Serious misconduct** | The employee deliberately disobeys a lawful order, behaves in a way that is clearly contrary to the employer’s interests, or commits acts that are obviously immoral or improper (e.g., theft, assault, repeated violation of company rules). |\n| 2 | **Willful disobedience** | The employee refuses to obey a **reasonable** and **lawful** order or instruction given by the employer or his/her duly authorized representative, after being warned. |\n| 3 | **Gross and habitual neglect of duties** | The employee repeatedly fails to perform his/her job duties with the degree of negligence that shows a **pattern** of neglect (e.g., repeatedly missing deadlines, chronic absenteeism despite warnings). |\n| 4 | **Fraud or willful breach of trust** | The employee commits fraud, misappropriates the employer’s money or property, or breaches the trust reposed on him/her (e.g., falsifying records, embezzlement). |\n| 5 | **Commission of a crime or offense** | The employee is **convicted** of an offense that is **directly related** to his/her work, or an offense that makes continued employment impossible (e.g., drug trafficking, homicide). |\n| 6 | **Other causes analogous to the foregoing** | Any other act that is **similar in nature and effect** to the causes above, even if not exactly described, provided that it is grave enough to justify dismissal. |\n| 7 | **Closure or cessation of operation** (this is a **just cause** under **Art. 297[formerly 283]** when the employer **permanently shuts down** the establishment or **reduces** its workforce due to **financial losses, disease, or any cause beyond the employer’s control**).  <br>*(Note: This is sometimes listed separately as “closure of the establishment” but is still a just cause for termination.)* |\n\n### How the law applies\n\n1. **Proof required** – The employer must **prove** that the just cause actually existed (through documentary evidence, witness testimony, etc.).\n2. **Due process** – Even if a just cause exists, the employer must follow **substantial due process** (notice and hearing) as required by **Art. 297[formerly 282]** and the jurisprudence on due process (e.g., *Gan vs. Galderma*, *G.R. No. 188388, 2015*). Failure to observe due process can convert a lawful dismissal into an **illegal dismissal** despite a just cause.\n3. **No compensation** – When a dismissal is based on a just cause and due process is observed, the employer is **not required** to pay reinstatement, separation pay, or back‑wages (though the employee is still entitled to his/her **pro‑rated 13th month pay, unused leave, and final pay**).\n\n---\n\n**Key citation**: **Article 297 (formerly Art. 282), Labor Code of the Philippines** – “Just causes for termination of employment.”  \n\n*(If you need the exact wording, see the 2022 Revised Labor Code – Art. 297, sections (a) to (g).)*"
+  },
+  {
+   "question": "What happens if I am illegally dismissed from my job?",
+   "sources": [
+    "art:294"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "art-294",
+    "art-147-notes",
+    "art-297",
+    "art-35",
+    "art-301",
+    "art-116"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-294"
+   ],
+   "rag_answer": "You are entitled to reinstatement with full back‑wages and benefits, or their monetary equivalent, from the date your pay was stopped until you are actually reinstated.  \nThis follows from the security‑of‑tenure rule for regular employees, which says an unjust dismissal requires the employer to give backpay, all allowances and other benefits, and to put you back in your former position with no loss of seniority rights [1].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "current",
+   "baseline_answer": "**If you are illegally dismissed (i.e., your employer fires you without a just cause or without observing the due‑process requirements in the Labor Code), the law gives you several remedies.**  \n\nBelow is a plain‑language rundown of what happens and what you can do, together with the specific Labor Code provisions that back each point.\n\n| What the law says | What it means for you |\n|-------------------|-----------------------|\n| **Art. 294 (formerly Art. 285) – Illegal Dismissal** | If the dismissal is “illegal” (no just cause **or** no due process), the employer is **liable** to: <br>1. **Reinstate you** to your former job **without loss of seniority rights**; **or** if reinstatement is no longer possible, **pay separation pay** (one month pay for every year of service, plus a fraction of a month for every 15 days worked). <br>2. **Pay back wages** – the difference between what you actually earned after the dismissal and what you should have earned if you had remained employed, **including allowances, bonuses, and other benefits**. |\n| **Art. 297 – Just Causes for Dismissal** | An employer may dismiss you only for the specific “just causes” listed (e.g., serious misconduct, fraud, willful breach of trust, etc.). If none of those apply, the dismissal is illegal. |\n| **Art. 298 – Authorized Causes for Dismissal** | Dismissal is also allowed only for the “authorized causes” (e.g., installation of labor‑saving devices, redundancy, retrenchment, closure of the business, etc.) and **must** be done with the required **notice** and **payment of separation pay**. If the employer fails to meet these conditions, the dismissal is illegal. |\n| **Art. 299 – Security of Tenure & Due Process** | Even when a just or authorized cause exists, the employer must: <br>1. Give you a **written notice** specifying the cause; <br>2. Allow you to **respond in writing** (the “counter‑notice”); <br>3. Conduct a **fair investigation** before deciding to dismiss. Skipping any of these steps makes the dismissal illegal. |\n| **Art. 115 – Remedy for Illegal Dismissal** (now part of Art. 294) | You may file a **complaint** before the **National Labor Relations Commission (NLRC)** within **four (4) years** from the date of dismissal. The NLRC will determine whether the dismissal was illegal and order the appropriate reliefs. |\n| **Art. 306 – Payment of Monetary Awards** | The NLRC may also order the employer to pay **moral damages** (up to ₱100,000) and **Attorney’s Fees** (typically 10% of the award) if the dismissal was done in bad faith. |\n| **Art. 305 – Injunctive Relief** | While your case is pending, you can ask the NLRC for a **temporary restraining order** to stop the employer from further retaliatory acts (e.g., preventing you from collecting your final pay). |\n\n### What you should do if you think you were illegally dismissed\n\n1. **Gather evidence** – keep the termination notice (if any), pay slips, employment contract, emails, witness statements, etc.\n2. **File a complaint** with the **NLRC** (Labor Arbiter) within **4 years** from the dismissal date.  \n   - The complaint must state the facts, the violation of the Labor Code articles above, and the reliefs you are seeking (reinstatement, back wages, separation pay, damages, etc.).\n3. **Attend the compulsory conference** – the NLRC will first try to settle the case. If settlement fails, the case proceeds to a formal hearing.\n4. **Receive the NLRC’s decision** – if the arbiter finds the dismissal"
+  },
+  {
+   "question": "How much separation pay do I get if my employer lets me go due to redundancy?",
+   "sources": [
+    "art:298",
+    "hb:14"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-14-separation-pay-3",
+    "hb-14-separation-pay-2",
+    "art-298",
+    "hb-14-separation-pay-1",
+    "hb-14-separation-pay-4",
+    "hb-14-separation-pay-7"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "hb-14-separation-pay-3",
+    "art-298",
+    "hb-14-separation-pay-4"
+   ],
+   "rag_answer": "You receive separation pay equal to one month’s pay for each year of service (any fraction of at least six months counts as a whole year).  \n\n- Redundancy is listed as a ground that gives the “one‑month‑pay‑per‑year” rule (Handbook 2024, 14. Separation Pay, C. Amount  [1]).  \n- The Labor Code also says that for redundancy the employee is entitled to “at least his one (1) month pay or to at least one (1) month pay for every year of service, whichever is higher” (Art. 298, formerly Art. 283) [3].  \nThus the higher rate—one month pay × years of service—applies.  \n\n**Computation formula:**  \nlatest monthly salary (including regular allowances) × number of whole years of service (a fraction of ≥ 6 months counts as a full year) = total separation pay [5][3].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "current",
+   "baseline_answer": "**Plain‑language answer**\n\nIf you are terminated because your position is declared **redundant** (i.e., the work is no longer needed or the employer is closing the establishment), the law requires your employer to give you **separation pay** in addition to the normal final pay (unused leave, 13th‑month pay, etc.).\n\n- **How much?**  \n  You are entitled to **at least one month’s salary for every year of service** (or a fraction of a year that is at least six months counts as a full year).  \n  If your regular monthly salary is ₱20,000 and you have worked 5 years, you would receive **₱20,000 × 5 = ₱100,000** as separation pay.\n\n- **What counts as a “year of service”?**  \n  A year is counted from the date you started working for the employer up to the date of termination. If you have worked for 4 years and 7 months, it is counted as 5 years (the extra 7 months is more than six months, so it is rounded up).\n\n- **What else do you get?**  \n  The separation pay is **in addition to**:\n  * any unpaid wages,\n  * unused service incentive leave,\n  * your 13th‑month pay (or the proportional part of it),\n  * any other benefits stipulated in your contract or company policy.\n\n- **When must it be paid?**  \n  The employer must give the separation pay **on the same day** the termination takes effect (the “final pay date”).\n\n- **If the employer does not pay?**  \n  You may file a complaint with the Department of Labor and Employment (DOLE) or bring the case before the Labor Arbiter. The employer may be ordered to pay the amount plus interest and legal fees.\n\n---\n\n### Legal basis (Labor Code of the Philippines)\n\n| Provision | What it says (simplified) |\n|-----------|---------------------------|\n| **Art. 298 (formerly Art. 301)** – **Termination by employer (redundancy)** | Requires payment of **separation pay** of **at least one month’s pay for every year of service**, with a fraction of at least six months counted as a full year. |\n| **Art. 294** – **Final pay** | All amounts due to the employee (including separation pay, unused leave, 13th‑month pay, etc.) must be paid **on the day of termination**. |\n| **Art. 115** – **Interpretation** | Provides that the “monthly salary” used for computing separation pay is the **basic salary** (excluding allowances, unless they are regularly received and constitute part of the wage). |\n| **Art. 117** – **Payment of wages** | Requires that wages (and by extension separation pay) be **paid promptly**; if not, the employer is liable for **interest**. |\n\nThese articles are found in **Presidential Decree No. 442 (the Labor Code)**, as amended by Republic Acts such as **RA 10361** (which clarified the computation of separation pay) and **RA 1159** (which added the six‑month rounding rule for service fractions)."
+  },
+  {
+   "question": "How long can probationary employment last?",
+   "sources": [
+    "art:296"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "art-296",
+    "hb-compliance-guide-8",
+    "art-301",
+    "art-149-notes",
+    "hb-11-leave-for-victims-of-violence-against-women-and-their-children-vawc-3",
+    "hb-compliance-guide-6"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-296"
+   ],
+   "rag_answer": "Probationary employment may last up to six months from the date the employee starts work, unless it is covered by an apprenticeship agreement that allows a longer period [1].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "outdated",
+   "baseline_answer": "**How long can probationary employment last?**\n\nIn the Philippines, a probationary period cannot be longer than **six (6) months** from the day the employee starts work.  \n\n- **Labor Code, Art. 281** says that an employee may be hired on a probationary basis “*for a period not exceeding six (6) months*.”  \n- If, after those six months, the employee is still not confirmed, the employer must either **regularize** the worker (make them a permanent employee) or **terminate** the employment – they cannot keep the employee on an endless probationary status.  \n\n**Key points in plain language**\n\n| Situation | What the law allows |\n|-----------|----------------------|\n| **Initial probation** | Up to 6 months total. |\n| **Extension** | The 6‑month period can be extended only if the employee’s performance is still being evaluated and the employer can justify the need for more time (e.g., the work is of a highly specialized nature). The extension must still be reasonable and not used to avoid regularization. |\n| **After 6 months** | The employee must be either regularized (permanent) or terminated. Continuing to keep the worker “probationary” beyond 6 months without a lawful reason is prohibited. |\n\n**Bottom line:** A probationary contract can last **no more than six months** (Art. 281, Labor Code), after which the employee must be given regular status or let go."
+  },
+  {
+   "question": "When does a casual employee become a regular employee?",
+   "sources": [
+    "art:295"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "art-295",
+    "art-75",
+    "art-302",
+    "hb-2-holiday-pay-2",
+    "art-296",
+    "art-73"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-295"
+   ],
+   "rag_answer": "A casual employee becomes a regular employee once he or she has rendered at least one year of service, whether that service is continuous or broken, with respect to the activity in which he or she is employed, and the employment continues as long as that activity exists [1].",
+   "baseline_verdict": "FAIL",
+   "baseline_article": "outdated",
+   "baseline_answer": "**When a casual employee becomes a regular employee**\n\nA casual (or “project‑based/ seasonal”) worker is considered **regular** when **all three** of the following conditions are met:\n\n1. **Duration of service** – the worker has been employed for **at least six (6) months** on a continuous basis;  \n2. **Nature of work** – the work he/she performs is **an activity that is normally done by regular employees** of the employer; and  \n3. **Pattern of work** – the work is performed **in a regular, ongoing, and non‑temporary manner** (i.e., it is not truly seasonal, project‑based, or occasional).\n\nWhen these three elements are satisfied, the employee’s status automatically changes from “casual” to “regular,” and he/she becomes entitled to all the security‑of‑tenure benefits that regular workers enjoy (e.g., security of employment, due process before termination, etc.).\n\n### Legal basis\n\n- **Article 296 of the Labor Code of the Philippines** (formerly Article 279) – “An employee who has been engaged continuously for a period of six months or more, whether or not such period is broken by a reasonable suspension, shall be deemed a regular employee, **unless** he/she is a manager, supervisor, or a confidential employee, or is hired for a specific project, seasonal work, or a limited period of time.”  \n- The Supreme Court’s interpretation in *G.R. No. 165658, *Mendoza v. National Power Corporation* (June 4, 2006) and *G.R. No. 208236, *Nicolás v. Rural Bank of Cabuyao* (Sept. 4, 2018) clarifies that the “six‑month rule” applies **only** when the employee’s work is of a regular nature and is performed on a regular, ongoing basis.\n\n### In plain language\n\n- **If you’ve been working for the same employer for six months or more, doing the same kind of job that regular staff do, and the work isn’t just a short‑term or seasonal project, the law says you’re now a regular employee.**  \n- Once you become regular, the employer can’t dismiss you without just cause and due process, and you get the full set of benefits that regular workers receive.\n\n---\n\n**Key articles to cite:**  \n- **Article 296, Labor Code** – definition of regular employment and the six‑month rule.  \n- **Article 297 (formerly Art. 280)** – security of tenure, which applies once an employee is deemed regular."
+  },
+  {
+   "question": "How much notice must I give my employer if I want to resign?",
+   "sources": [
+    "art:300"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "art-300",
+    "art-296",
+    "hb-14-separation-pay-5",
+    "art-297",
+    "art-294",
+    "art-148"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-300"
+   ],
+   "rag_answer": "You must give your employer at least one (1) month’s written notice before resigning [1].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "outdated",
+   "baseline_answer": "**Plain‑language answer**\n\nIf you want to quit your job, you must tell your employer **at least 30 days before your intended last day of work**. This gives the company time to find a replacement or make other arrangements.\n\n**Legal basis**\n\n- **Article 285 of the Labor Code of the Philippines** – it states that an employee who wishes to terminate his/her employment may do so by giving the employer a written notice **not less than 30 days** before the intended date of termination, unless a longer period is required by a collective bargaining agreement or an employment contract.  \n\n(If your contract or a collective bargaining agreement says you need to give more than 30 days, you must follow that longer period.)"
+  },
+  {
+   "question": "What is the minimum retirement pay?",
+   "sources": [
+    "art:302",
+    "hb:15"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-15-retirement-pay-2",
+    "hb-15-retirement-pay-5",
+    "hb-15-retirement-pay-4",
+    "hb-15-retirement-pay-8",
+    "hb-15-retirement-pay-1",
+    "hb-15-retirement-pay-7"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "missing",
+   "cited": [
+    "hb-15-retirement-pay-2"
+   ],
+   "rag_answer": "The minimum retirement pay is one‑half month salary for each year of service, which is calculated as the employee’s daily rate multiplied by 22.5 days and then multiplied by the number of years worked [1].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "wrong",
+   "baseline_answer": "**Plain‑language answer**\n\nIn the Philippines, an employee who retires (or is forced to retire) is entitled to a **minimum retirement pay** of **½ month’s salary for every year of service**. The amount is calculated using the employee’s most recent (latest) salary rate. If the employee has worked a fraction of a year, the fraction is counted as a whole year only when it is at least one (1) month; otherwise it is ignored.\n\n**Key points**\n\n| Situation | Minimum retirement pay |\n|-----------|------------------------|\n| Private‑sector employee who retires voluntarily (or is retired by employer) after at least **five (5) years** of service | **½ month salary × number of years of service** (rounded down to the nearest whole year) |\n| Employee who is **forced to retire** (e.g., due to age, health, or restructuring) **regardless of length of service** | Same formula – **½ month salary × number of years of service** (but the employer may be required to give a larger amount if a collective bargaining agreement or company policy provides more) |\n| If the employee has **less than five (5) years** of service and retires voluntarily, **no retirement pay** is required (unless a contract, collective bargaining agreement, or company policy says otherwise). |\n\n**Where the rule comes from**\n\n- **Labor Code of the Philippines, Article 102** – “Retirement Pay.”  \n  - **Section 1** defines the minimum retirement pay as **“one-half month salary for every year of service.”**  \n  - **Section 2** states that the pay is computed on the **latest salary rate**.  \n  - **Section 3** clarifies the **five‑year service requirement** for voluntary retirement and notes that an employer may give a larger amount if a contract, CBA, or company policy so provides.  \n\n(Other related provisions: **Article 113** on termination benefits, and **Presidential Decree No. 851** for government employees, but the baseline minimum for private‑sector workers is found in **Article 102**.)"
+  },
+  {
+   "question": "What is the minimum age for employment?",
+   "sources": [
+    "art:137"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "art-137",
+    "art-137-notes",
+    "art-137-notes-3",
+    "art-144",
+    "art-137-notes-2",
+    "art-137-notes-4"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-137",
+    "art-137-notes",
+    "art-137-notes-2",
+    "art-137-notes-3"
+   ],
+   "rag_answer": "The minimum age at which a person may be employed is fifteen (15) years old, provided the work is non‑hazardous and does not interfere with schooling [1]. Persons younger than fifteen may only work under very limited family‑only conditions or in essential public‑entertainment roles that require a DLE work permit and parental consent [2][5]. For ages fifteen to eighteen, employment is allowed only for non‑hazardous work and the employee must not be discriminated against because of age [2]. The term “child” applies to anyone under eighteen (18) years of age for the purposes of these protections [3].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "wrong",
+   "baseline_answer": "**Answer (plain language):**  \nIn the Philippines, the youngest a person can be legally employed is **15 years old**. Children who are 15, 16, or 17 may work, but only in light, non‑hazardous jobs and for limited hours.\n\n**Labor Code citation:**  \n- **Article 130** (Employment of Minors) – sets 15 years as the minimum age for employment and outlines the conditions for workers aged 15‑17."
+  },
+  {
+   "question": "What does Article 279 say about security of tenure?",
+   "sources": [
+    "art:294"
+   ],
+   "retrieval_rank": 3,
+   "retrieved": [
+    "art-279-1",
+    "art-279-2",
+    "art-294",
+    "art-294-notes",
+    "art-257-notes",
+    "art-292-1"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": "current",
+   "cited": [
+    "art-294"
+   ],
+   "rag_answer": "Article 294 (formerly Art. 279) provides that an employee in regular employment may be terminated only for a just cause or when authorized by law; if dismissed without just cause, the worker is entitled to reinstatement with full back‑wages, seniority rights, allowances and other benefits from the date of dismissal until actual reinstatement [3].",
+   "baseline_verdict": "PASS",
+   "baseline_article": "outdated",
+   "baseline_answer": "**Plain‑language answer**\n\nArticle 279 of the Philippine Labor Code says that an employee who is covered by the law enjoys **“security of tenure.”** In simple terms, this means that the employee cannot be dismissed or removed from work without a just cause (a legally‑defined reason) and without following the proper procedural steps laid down in the law. If the employer wants to terminate the employment, they must first give the employee a written notice of the cause and an opportunity to be heard, and the reason for dismissal must be one of the specific grounds listed in the Code (e.g., serious misconduct, fraud, willful breach of contract, etc.). If any of these requirements are not met, the dismissal is illegal and the employee may be reinstated with back pay.\n\n**Cited provision**\n\n- **Article 279, Labor Code of the Philippines** – “Security of tenure.”  \n\n(Any reference to the specific text of Article 279 is sufficient; the provision itself is the source.)"
+  },
+  {
+   "question": "What is the current daily minimum wage in NCR?",
+   "sources": [
+    "hb:1"
+   ],
+   "retrieval_rank": 1,
+   "retrieved": [
+    "hb-1-minimum-wage-4",
+    "hb-1-minimum-wage-11",
+    "hb-1-minimum-wage-10",
+    "hb-1-minimum-wage-3",
+    "art-141-notes",
+    "hb-1-minimum-wage-2"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": null,
+   "cited": [],
+   "rag_answer": "I couldn't find this in the Labor Code or the DOLE Handbook."
+  },
+  {
+   "question": "How do I register a business name with the DTI?",
+   "sources": [],
+   "retrieval_rank": null,
+   "retrieved": [
+    "art-244",
+    "hb-1-minimum-wage-18",
+    "art-241",
+    "art-237",
+    "art-240",
+    "art-242"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": null,
+   "cited": [],
+   "rag_answer": "I couldn't find this in the Labor Code or the DOLE Handbook."
+  },
+  {
+   "question": "How do I apply for a Philippine passport?",
+   "sources": [],
+   "retrieval_rank": null,
+   "retrieved": [
+    "art-40",
+    "art-19-notes",
+    "art-18",
+    "art-27",
+    "hb-18-social-security-benefits-3",
+    "art-21"
+   ],
+   "rag_verdict": "PASS",
+   "rag_article": null,
+   "cited": [],
+   "rag_answer": "I couldn't find this in the Labor Code or the DOLE Handbook."
+  }
+ ]
+}

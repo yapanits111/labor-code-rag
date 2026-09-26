@@ -1,0 +1,8 @@
+numpy
+fastembed
+python-dotenv
+groq
+anthropic
+google-generativeai
+fastapi
+uvicorn[standard]

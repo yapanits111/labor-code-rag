@@ -1,0 +1,42 @@
+{
+ "note": "Calibrates the relevance threshold: questions the app should decline (off topic or too vague to answer) and short, casual on-topic questions it must still answer.",
+ "decline": [
+  "what can i do with this?",
+  "hi",
+  "hello, who are you?",
+  "what is this app?",
+  "tell me a joke",
+  "what's the weather in Manila today?",
+  "How do I register a business name with the DTI?",
+  "How do I apply for a Philippine passport?",
+  "What is the capital of Japan?",
+  "Write me a poem about love",
+  "How do I cook adobo?",
+  "What is the best programming language?",
+  "How much is a jeepney fare in Manila?",
+  "Who won the last presidential election?",
+  "Can you help me with my homework?",
+  "What is RAG?",
+  "asdfgh",
+  "How do I get a driver's license from the LTO?",
+  "What are the requirements for a tourist visa to Japan?",
+  "Recommend a good movie"
+ ],
+ "answer": [
+  "overtime pay?",
+  "13th month",
+  "maternity leave",
+  "can I be fired?",
+  "holiday pay rules",
+  "what are my rights as an employee?",
+  "sss contributions",
+  "is my boss allowed to cut my salary?",
+  "night shift pay",
+  "how many hours can I work in a day",
+  "do I get paid if I work on Christmas?",
+  "separation pay",
+  "Can my employer make me work 7 days a week?",
+  "Is a verbal job offer binding?",
+  "what is a kasambahay entitled to?"
+ ]
+}
